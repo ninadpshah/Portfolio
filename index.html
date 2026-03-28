@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ninad Parthiv Shah. Portfolio.</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #1a1610; min-height: 100%; }
+    body {
+      zoom: 1.25;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: #f4ebd9;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* Subtle dot grid that shows through transparent section areas */
+    .atelier {
+      background-image:
+        radial-gradient(rgba(240, 162, 121, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      background-position: 0 0;
+    }
+    /* ASCII corner brackets for the whoami terminal */
+    .whoami-frame {
+      position: relative;
+    }
+    .whoami-frame::before,
+    .whoami-frame::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-color: #f0a279;
+      pointer-events: none;
+    }
+    .whoami-frame::before {
+      top: -1px; left: -1px;
+      border-top: 2px solid #f0a279;
+      border-left: 2px solid #f0a279;
+    }
+    .whoami-frame::after {
+      bottom: -1px; right: -1px;
+      border-bottom: 2px solid #f0a279;
+      border-right: 2px solid #f0a279;
+    }
+    image-slot {
+      --image-slot-bg: #2b251c;
+      --image-slot-color: #7f7461;
+      --image-slot-border: 1px dashed #3a3328;
+    }
+
+    /* ─── Responsive overrides ─── */
+    @media (max-width: 820px) {
+      /* Collapse all known multi-column grids to a single column */
+      .atelier [style*="grid-template-columns: 340px 1fr"],
+      .atelier [style*="grid-template-columns: 1fr 2fr"],
+      .atelier [style*="grid-template-columns: 180px 1fr 280px"],
+      .atelier [style*="grid-template-columns: 1.5fr 1fr"],
+      .atelier [style*="grid-template-columns: 1fr 1fr"],
+      .atelier [style*="grid-template-columns: 1.4fr 1fr"],
+      .atelier [style*="grid-template-columns: 1.6fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+      .atelier [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+      }
+
+      /* Drop left rail border so it stacks cleanly */
+      .atelier aside { border-right: none !important; }
+
+      /* Tighten section padding */
+      .atelier > div:first-child,
+      .atelier section,
+      .atelier aside,
+      .atelier section > div[style*="padding: 56px 56px"],
+      .atelier section > div[style*="padding: 48px 48px"] {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      .atelier section { padding-top: 40px !important; padding-bottom: 40px !important; }
+
+      /* Top bar: hide center nav, let edges breathe */
+      .atelier > div:first-child > div:nth-child(2) { display: none !important; }
+      .atelier > div:first-child { font-size: 10px !important; gap: 8px !important; }
+
+      /* Headings */
+      .atelier h1 { font-size: 44px !important; letter-spacing: -1px !important; line-height: 1.05 !important; }
+      .atelier h2 { font-size: 32px !important; }
+      .atelier h3 { font-size: 22px !important; }
+
+      /* Section headers ruler — drop the line */
+      .atelier h2 + div { display: none !important; }
+
+      /* whoami terminal: remove max-width so it fills column */
+      .atelier [style*="max-width: 480"] { max-width: 100% !important; }
+
+      /* Portrait card width sanity */
+      .atelier image-slot { height: 240px !important; }
+
+      /* Project article uses 3-col contributions grid; collapse */
+      .atelier article { gap: 16px !important; }
+
+      /* Contact CTA stacks */
+      .atelier [style*="grid-template-columns: 120px 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .atelier [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      .atelier h1 { font-size: 36px !important; }
+      .atelier h2 { font-size: 26px !important; }
+      .atelier section { padding-left: 16px !important; padding-right: 16px !important; }
+    }
+  </style>
+
+  <!-- React + Babel pinned -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="data.jsx"></script>
+  <script type="text/babel" src="portfolio-atelier.jsx"></script>
+
+  <script type="text/babel" data-presets="env,react">
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <window.AtelierPortfolio />
+    );
+  </script>
+</body>
+</html>
