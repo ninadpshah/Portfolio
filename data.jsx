@@ -17,6 +17,27 @@ const RESUME = {
   alsoOpen: "Primary focus: AI and ML Engineering. Also open to Data Engineering and Data Science roles.",
 
   capabilities: [
+    {
+      title: "AI Engineering",
+      blurb: "LLM systems in production. Agents, MCP servers, evals, and guardrails.",
+      tags: ["Agents", "MCP", "RAG", "Evals"],
+      primary: true,
+    },
+    {
+      title: "Data Science",
+      blurb: "Statistical modelling and analysis on large, messy real-world data.",
+      tags: ["Python", "Statistics", "ML"],
+    },
+    {
+      title: "Software Engineering",
+      blurb: "Production backends, REST APIs, and the CI/CD that keeps them shipping.",
+      tags: ["FastAPI", "Docker", "CI/CD"],
+    },
+    {
+      title: "Data Engineering",
+      blurb: "Scalable pipelines and storage across distributed systems and cloud.",
+      tags: ["PySpark", "AWS", "Snowflake"],
+    },
   ],
 
   experience: [
