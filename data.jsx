@@ -41,6 +41,22 @@ const RESUME = {
   ],
 
   experience: [
+    {
+      company: "Armor1.ai",
+      role: "Security Software Engineer",
+      location: "Remote",
+      start: "Dec 2025",
+      end: "Present",
+      tag: "Current",
+      summary:
+        "Building AI security infrastructure. Multi-pass LLM analysis, evaluation pipelines, and responsible AI guardrails.",
+      bullets: [
+        "Designed a five-layer AI security scanner with multi-pass LLM analysis across 25+ metrics. Combined static review with agent-based detection and tiered guardrails to cut per-scan cost under $0.005.",
+        "Built evaluation pipelines with human-in-the-loop review to validate agent consistency across prompt versions on curated evalsets.",
+        "Analyzed MCP servers and AI tooling in production to surface PII exposure and security risks, driving responsible AI framework adoption.",
+      ],
+      stack: ["LLM Evals", "MCP", "Guardrails", "Python"],
+    },
   ],
 
   projects: [
