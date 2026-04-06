@@ -57,6 +57,51 @@ const RESUME = {
       ],
       stack: ["LLM Evals", "MCP", "Guardrails", "Python"],
     },
+    {
+      company: "CAPX",
+      role: "AI Software Engineer",
+      location: "Remote",
+      start: "Aug 2025",
+      end: "Dec 2025",
+      summary:
+        "Shipped agent backends for financial data extraction. Sequential orchestration, tool calling, and event-driven workflows.",
+      bullets: [
+        "Built AI agents with Google ADK and sequential autonomous orchestration. Extracted 20+ metrics from 4,000+ firms via REST APIs.",
+        "Built backend services with multi-step workflow automation and tool-calling patterns. Implemented state management and usage analysis guardrails.",
+        "Owned event-driven architectures and iterated on AI-powered tools with end users based on real-world feedback.",
+      ],
+      stack: ["Google ADK", "Tool Calling", "FastAPI", "REST"],
+    },
+    {
+      company: "Arizona State University",
+      role: "Academic Integrity Data Analyst",
+      location: "Tempe, AZ",
+      start: "Sep 2024",
+      end: "May 2025",
+      summary:
+        "Owned end-to-end data analysis across 500+ hours of records and turned messy inputs into stakeholder-ready findings.",
+      bullets: [
+        "Defined project scope and deliverables across 500+ hours of data with attention to detail and fast iteration.",
+        "Communicated complex technical findings clearly to stakeholders at different levels through well-documented deliverables.",
+      ],
+      stack: ["Python", "SQL", "Tableau"],
+    },
+    {
+      company: "Spyne.ai",
+      role: "Computer Vision Intern",
+      location: "Gurugram, India",
+      start: "May 2022",
+      end: "Jul 2022",
+      summary:
+        "Production computer vision systems. 50K+ training images and 99.8% uptime in production.",
+      bullets: [
+        "Built and deployed production computer vision services using FastAPI and AWS with 99.8% uptime through robust testing.",
+        "Designed a computer vision system trained on 50K+ images, iterating on real customer feedback.",
+        "Integrated services into production via REST APIs with logging, telemetry, monitoring, and CI/CD pipelines.",
+        "Fine-tuned and deployed image enhancement models with 95%+ accuracy.",
+      ],
+      stack: ["PyTorch", "FastAPI", "AWS", "CI/CD"],
+    },
   ],
 
   projects: [
