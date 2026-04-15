@@ -108,8 +108,7 @@ const RESUME = {
   ],
 
   skills: {
-    Languages: [
-],
+    Languages: ["Python", "C", "C++", "SQL", "Julia"],
     "AI and ML": [
       "PyTorch",
       "TensorFlow",
