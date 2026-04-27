@@ -105,6 +105,22 @@ const RESUME = {
   ],
 
   projects: [
+    {
+      id: "edgar-rag",
+      title: "SEC EDGAR RAG and Local MCP Server",
+      kicker: "Featured. Open Source.",
+      year: "2026",
+      disciplines: ["AI Engineering", "Data Engineering"],
+      blurb:
+        "An MCP server with a RAG pipeline over SEC EDGAR 10-K filings. FastMCP, ChromaDB, and BGE embeddings. Year-over-year filing comparison and Loughran-McDonald sentiment scoring grounded in the Lazy Prices research.",
+      contributions: [
+        "Structure-aware 512-token chunker hitting 87.7% recall on financial docs",
+        "Loughran-McDonald sentiment across 5 categories plus YoY cosine similarity diff",
+        "Eval harness with 35 golden queries measuring Recall@K and MRR",
+      ],
+      stack: ["FastMCP", "ChromaDB", "BGE-base", "Python", "Loughran-McDonald"],
+      metric: { value: "0.89", label: "Recall @ 5" },
+    },
   ],
 
   skills: {
