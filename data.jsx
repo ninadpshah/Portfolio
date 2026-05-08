@@ -138,6 +138,22 @@ const RESUME = {
       stack: ["LightGBM", "TensorFlow", "Optuna", "SHAP", "SEC EDGAR", "FRED"],
       metric: { value: "9.6x", label: "ROI vs random" },
     },
+    {
+      id: "fake-reviews",
+      title: "Fake Review Detection",
+      kicker: "Research. ML benchmark.",
+      year: "2024",
+      disciplines: ["Data Science", "AI Engineering"],
+      blurb:
+        "A comparative benchmark of 16 classifiers detecting fake reviews on Amazon and Yelp datasets. Engineered sentiment, readability, and behavioral features end to end.",
+      contributions: [
+        "16 classifiers benchmarked on accuracy, precision, recall, F1, and ROC AUC",
+        "VADER sentiment, Flesch readability, and 9 behavioral features",
+        "90.2% accuracy on Amazon, 89.7% on Yelp",
+      ],
+      stack: ["scikit-learn", "XGBoost", "LightGBM", "CatBoost", "NLTK", "VADER"],
+      metric: { value: "90.2%", label: "accuracy" },
+    },
   ],
 
   skills: {
