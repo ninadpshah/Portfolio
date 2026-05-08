@@ -10,3 +10,16 @@ Source for my personal portfolio site. A single-page React app with no build ste
 ## Why no build step
 
 The site is small enough that a bundler would cost more than it returns. React, ReactDOM, and Babel load from a CDN with pinned versions and SRI hashes, so the whole deploy is "push the files." No `npm install`, no lockfile drift, nothing to break between commits. The tradeoff is in-browser JSX transpilation, which costs a few hundred milliseconds on first paint and requires network access at view time.
+
+## Structure
+
+```
+index.html              entry point, CDN script tags, SRI hashes
+data.jsx                all resume content: bio, experience, projects, skills, certifications
+portfolio-atelier.jsx   the React component that renders the page
+portrait.jpg            portrait image
+LICENSE
+README.md
+```
+
+Content and presentation are deliberately separate. Everything that changes often lives in `data.jsx`; everything that changes rarely lives in `portfolio-atelier.jsx`.
