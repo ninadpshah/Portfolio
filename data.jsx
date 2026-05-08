@@ -121,6 +121,23 @@ const RESUME = {
       stack: ["FastMCP", "ChromaDB", "BGE-base", "Python", "Loughran-McDonald"],
       metric: { value: "0.89", label: "Recall @ 5" },
     },
+    {
+      id: "ipo-success",
+      title: "IPO Success Prediction",
+      kicker: "Capstone. ASU.",
+      year: "2025",
+      disciplines: ["Data Science", "Data Engineering"],
+      blurb:
+        "An end-to-end ML pipeline predicting 6-month and 3-year IPO performance from SEC filings, macroeconomic indicators, and market sentiment. Capstone for the M.S. Data Science program at Arizona State.",
+      contributions: [
+        "Integrated 6 data sources covering 5,057 IPOs from 2009 to 2025",
+        "200+ engineered features across financials, macro, and sentiment",
+        "LightGBM AUC 0.77 with SHAP interpretability",
+        "Investment backtest returning 9.6x random baseline",
+      ],
+      stack: ["LightGBM", "TensorFlow", "Optuna", "SHAP", "SEC EDGAR", "FRED"],
+      metric: { value: "9.6x", label: "ROI vs random" },
+    },
   ],
 
   skills: {
