@@ -154,6 +154,22 @@ const RESUME = {
       stack: ["scikit-learn", "XGBoost", "LightGBM", "CatBoost", "NLTK", "VADER"],
       metric: { value: "90.2%", label: "accuracy" },
     },
+    {
+      id: "tlc-tips",
+      title: "NYC Taxi Tip Prediction",
+      kicker: "Deep learning. At scale.",
+      year: "2025",
+      disciplines: ["Data Science", "Software Engineering"],
+      blurb:
+        "A deep learning regression model over 5.6M+ NYC Yellow Taxi trip records. Neural network with engineered temporal features, GPU-accelerated training, and Z-score outlier filtering.",
+      contributions: [
+        "5.6M records processed with GPU-accelerated training",
+        "Cyclical temporal features extracted from pickup and dropoff timestamps",
+        "RMSE of $2.62 on a 1.7M held-out test set",
+      ],
+      stack: ["TensorFlow", "Keras", "pandas", "scikit-learn", "GPU"],
+      metric: { value: "$2.62", label: "test RMSE" },
+    },
   ],
 
   skills: {
