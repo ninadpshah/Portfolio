@@ -170,6 +170,22 @@ const RESUME = {
       stack: ["TensorFlow", "Keras", "pandas", "scikit-learn", "GPU"],
       metric: { value: "$2.62", label: "test RMSE" },
     },
+    {
+      id: "vision-blur",
+      title: "Vision Without Glasses",
+      kicker: "Research. CNN robustness.",
+      year: "2022",
+      disciplines: ["Data Science", "AI Engineering"],
+      blurb:
+        "Investigated CNN robustness to image blur for binary classification using transfer learning. Benchmarked DenseNet121, InceptionV3, and ResNet50V2 on Dogs vs Cats with Gaussian and box blur degradation.",
+      contributions: [
+        "98.5% binary accuracy with DenseNet121 transfer learning",
+        "Custom blur pipeline with Gaussian and cylindrical kernels at multiple sigmas",
+        "Published academic paper on CNN degradation under blur, Spring 2022",
+      ],
+      stack: ["TensorFlow", "Keras", "OpenCV", "Transfer Learning"],
+      metric: { value: "98.5%", label: "accuracy" },
+    },
   ],
 
   skills: {
