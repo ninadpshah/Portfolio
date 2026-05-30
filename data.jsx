@@ -186,6 +186,22 @@ const RESUME = {
       stack: ["TensorFlow", "Keras", "OpenCV", "Transfer Learning"],
       metric: { value: "98.5%", label: "accuracy" },
     },
+    {
+      id: "social-media",
+      title: "Instagram User Analysis",
+      kicker: "Analytics. Multi-platform.",
+      year: "2026",
+      disciplines: ["Data Science"],
+      blurb:
+        "Behavioral analytics across 5,000+ users on Instagram, TikTok, YouTube, LinkedIn, Twitter, and Facebook. K-means user segmentation and interactive Plotly dashboards for engagement insights.",
+      contributions: [
+        "K-means clustering surfacing 5 distinct user personas",
+        "Interactive Plotly dashboards for engagement and trend analysis",
+        "Trend identification across platforms and content types",
+      ],
+      stack: ["pandas", "scikit-learn", "Plotly", "Seaborn"],
+      metric: { value: "5", label: "user segments" },
+    },
   ],
 
   skills: {
