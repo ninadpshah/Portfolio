@@ -287,6 +287,10 @@ const RESUME = {
   ],
 
   certifications: [
+    { name: "AWS Cloud Practitioner", issuer: "Amazon Web Services" },
+    { name: "AWS AI Practitioner", issuer: "Amazon Web Services" },
+    { name: "Hadoop and Apache Spark", issuer: "LinkedIn Learning" },
+    { name: "Microsoft Azure", issuer: "LinkedIn Learning" },
   ],
 };
 
