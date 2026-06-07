@@ -265,6 +265,25 @@ const RESUME = {
   },
 
   education: [
+    {
+      school: "Arizona State University",
+      degree: "M.S. Data Science, Analytics, and Engineering",
+      location: "Tempe, Arizona",
+      start: "Aug 2023",
+      end: "May 2025",
+      gpa: "3.97 / 4.00",
+      notes:
+        "Coursework: Statistical Machine Learning. Data Visualization. Data-Driven Optimization. Big Data.",
+    },
+    {
+      school: "Indian Institute of Technology Gandhinagar",
+      degree: "B.Tech. Electrical Engineering and Computer Science",
+      location: "Gandhinagar, India",
+      start: "Jul 2019",
+      end: "Jul 2023",
+      gpa: "",
+      notes: "Dual-major foundation across EE and CS. Signal processing, algorithms, distributed systems.",
+    },
   ],
 
   certifications: [
