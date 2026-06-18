@@ -34,3 +34,11 @@ For a local server instead (useful if a browser blocks local file loads):
 python -m http.server 8000
 # then visit http://localhost:8000
 ```
+
+## Deploying to GitHub Pages
+
+1. Push to the repo's default branch.
+2. **Settings → Pages → Build and deployment**, set Source to *Deploy from a branch*, branch `main`, folder `/ (root)`.
+3. The live URL appears at the top of the Pages settings after a minute or two.
+
+Naming the repo `<username>.github.io` serves it from the root domain instead of a subpath.
