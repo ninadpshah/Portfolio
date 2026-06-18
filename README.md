@@ -23,3 +23,14 @@ README.md
 ```
 
 Content and presentation are deliberately separate. Everything that changes often lives in `data.jsx`; everything that changes rarely lives in `portfolio-atelier.jsx`.
+
+## Running locally
+
+Open `index.html` in any modern browser. That is the whole procedure.
+
+For a local server instead (useful if a browser blocks local file loads):
+
+```bash
+python -m http.server 8000
+# then visit http://localhost:8000
+```
