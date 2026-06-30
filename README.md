@@ -42,3 +42,18 @@ python -m http.server 8000
 3. The live URL appears at the top of the Pages settings after a minute or two.
 
 Naming the repo `<username>.github.io` serves it from the root domain instead of a subpath.
+
+## Editing content
+
+Almost all edits happen in `data.jsx`:
+
+| Change | Where |
+|---|---|
+| Current role | `experience[0]` — first entry renders as current |
+| Add a project | append to the `projects` array |
+| Headline and pitch | `headline`, `longPitch` |
+| Stack tags | `skills` |
+| Certifications | `certifications` |
+| Résumé download link | `resumeUrl` |
+
+Layout, colour, and typography live in `portfolio-atelier.jsx`. Section markers in that file (`{/* ABOUT */}`, `{/* CONTACT */}`) map to the page sections.
