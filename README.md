@@ -57,3 +57,10 @@ Almost all edits happen in `data.jsx`:
 | Résumé download link | `resumeUrl` |
 
 Layout, colour, and typography live in `portfolio-atelier.jsx`. Section markers in that file (`{/* ABOUT */}`, `{/* CONTACT */}`) map to the page sections.
+
+## Design notes
+
+- Type: `Newsreader` for display, `DM Sans` for body, `JetBrains Mono` for the terminal block, all from Google Fonts
+- Responsive breakpoints at 820px and 480px
+- The portrait is CSS-cropped to fit, so any aspect ratio works; roughly 3:4 looks best
+- Page renders at 125% via CSS zoom for readability on large displays
