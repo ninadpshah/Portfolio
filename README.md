@@ -64,3 +64,7 @@ Layout, colour, and typography live in `portfolio-atelier.jsx`. Section markers 
 - Responsive breakpoints at 820px and 480px
 - The portrait is CSS-cropped to fit, so any aspect ratio works; roughly 3:4 looks best
 - Page renders at 125% via CSS zoom for readability on large displays
+
+## License
+
+MIT — see [LICENSE](LICENSE).
