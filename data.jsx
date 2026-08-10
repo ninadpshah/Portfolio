@@ -128,7 +128,6 @@ const RESUME = {
       ],
       stack: ["Gemini", "Cloudflare Workers", "JavaScript", "GitHub Pages"],
       metric: { value: "$0", label: "cost to run" },
-      repoUrl: "https://github.com/ninadpshah/ask-ninad-worker",
     },
     {
       id: "edgar-rag",

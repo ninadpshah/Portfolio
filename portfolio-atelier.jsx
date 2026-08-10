@@ -28,7 +28,7 @@ const AtelierPortfolio = () => {
     <div className="atelier" style={{ width: "100%", background: A.bg, color: A.ink, fontFamily: sans }}>
       {/* Top strip */}
       <div style={{
-        padding: "18px 56px",
+        padding: "9px 56px",
         borderBottom: `1px solid ${A.rule}`,
         display: "flex", justifyContent: "space-between", alignItems: "center",
         fontFamily: mono, fontSize: 11, color: A.softInk,
@@ -65,7 +65,7 @@ const AtelierPortfolio = () => {
       }}>
         {/* Left rail: portrait + identity */}
         <aside style={{
-          padding: "48px 36px 48px 56px",
+          padding: "20px 36px 32px 56px",
           borderRight: `1px solid ${A.rule}`,
           background: A.panel,
         }}>
@@ -74,7 +74,7 @@ const AtelierPortfolio = () => {
             padding: 10, background: A.card,
           }}>
             <div style={{
-              width: "100%", height: 280,
+              width: "100%", height: 210,
               backgroundImage: "url(portrait.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -112,7 +112,7 @@ const AtelierPortfolio = () => {
         </aside>
 
         {/* Right column: hero copy */}
-        <div style={{ padding: "56px 56px 48px" }}>
+        <div style={{ padding: "20px 56px 32px" }}>
           <div style={{
             display: "inline-flex", alignItems: "center", gap: 10,
             fontFamily: mono, fontSize: 11, color: A.softInk,
@@ -124,27 +124,27 @@ const AtelierPortfolio = () => {
           </div>
 
           <h1 style={{
-            fontFamily: serif, fontWeight: 400, fontSize: 78, lineHeight: 1.02,
-            margin: "24px 0 0", color: A.ink, letterSpacing: -1.6, textWrap: "balance",
+            fontFamily: serif, fontWeight: 400, fontSize: 50, lineHeight: 1.04,
+            margin: "12px 0 0", color: A.ink, letterSpacing: -1.1, textWrap: "balance",
           }}>
             Building <em style={{ color: A.accent, fontStyle: "italic" }}>agentic systems</em><br/>
             that ship in production.
           </h1>
 
           <p style={{
-            fontFamily: serif, fontSize: 21, lineHeight: 1.55,
-            color: A.softInk, maxWidth: 640, marginTop: 24, textWrap: "pretty",
+            fontFamily: serif, fontSize: 17, lineHeight: 1.5,
+            color: A.softInk, maxWidth: 620, marginTop: 11, textWrap: "pretty",
           }}>
             {r.longPitch}
           </p>
 
           {/* whoami.sh terminal block */}
           <div className="whoami-frame" style={{
-            marginTop: 28, background: "#0f0d09", color: A.softInk,
-            fontFamily: mono, fontSize: 12, lineHeight: 1.8,
-            padding: "14px 18px", border: `1px solid ${A.rule}`,
-            boxShadow: `6px 6px 0 ${A.accent}`,
-            maxWidth: 640,
+            marginTop: 14, background: "#0f0d09", color: A.softInk,
+            fontFamily: mono, fontSize: 11.5, lineHeight: 1.42,
+            padding: "11px 16px", border: `1px solid ${A.rule}`,
+            boxShadow: `5px 5px 0 ${A.accent}`,
+            maxWidth: 620,
           }}>
             <div style={{ color: A.mutedInk, marginBottom: 6 }}># whoami.sh</div>
             <div><span style={{ color: "#9ec1cf" }}>shipped_pre_llm</span> <span style={{ color: "#d6c9b1" }}>=</span> <span style={{ color: "#a3e635" }}>True</span></div>
@@ -154,7 +154,7 @@ const AtelierPortfolio = () => {
             <div style={{ paddingLeft: 28 }}><span style={{ color: A.accent }}>"deep_learning"</span>, <span style={{ color: A.accent }}>"data_pipelines"</span>,</div>
             <div>]</div>
             <div><span style={{ color: "#9ec1cf" }}>open_to_relocate</span> <span style={{ color: "#d6c9b1" }}>=</span> <span style={{ color: "#a3e635" }}>True</span></div>
-            <div style={{ marginTop: 10 }}>
+            <div style={{ marginTop: 7 }}>
               <a
                 href="#"
                 onClick={(e) => { e.preventDefault(); if (window.askNinad) window.askNinad.open(); }}
@@ -169,7 +169,7 @@ const AtelierPortfolio = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: 28, display: "flex", gap: 12 }}>
+          <div style={{ marginTop: 14, display: "flex", gap: 12 }}>
             <a href="#contact" style={primaryDark(A, mono)}>$ hire_me</a>
             <a href="#projects" style={ghostDark(A, mono)}>$ ls ./projects</a>
           </div>
@@ -266,9 +266,9 @@ const AtelierPortfolio = () => {
         <div style={{ marginTop: 36, display: "flex", flexDirection: "column" }}>
           {r.experience.map((e, i) => (
             <article key={i} style={{
-              padding: "32px 0",
+              padding: "30px 0",
               borderTop: `1px solid ${A.rule}`,
-              display: "grid", gridTemplateColumns: "180px 1fr 280px", gap: 32,
+              display: "grid", gridTemplateColumns: "180px 1fr", gap: 36,
             }}>
               <div style={{ fontFamily: mono, fontSize: 11, color: A.mutedInk, textTransform: "uppercase", letterSpacing: 1.2 }}>
                 <div>{e.start}</div>
@@ -281,30 +281,37 @@ const AtelierPortfolio = () => {
                 )}
               </div>
               <div>
-                <div style={{ fontFamily: serif, fontSize: 32, lineHeight: 1.05, color: A.ink, letterSpacing: -0.6 }}>
+                <div style={{ fontFamily: serif, fontSize: 26, lineHeight: 1.1, color: A.ink, letterSpacing: -0.5 }}>
                   {e.role}
                 </div>
-                <div style={{ fontFamily: serif, fontStyle: "italic", fontSize: 19, color: A.accent, marginTop: 4 }}>
+                <div style={{ fontFamily: serif, fontStyle: "italic", fontSize: 17, color: A.accent, marginTop: 3 }}>
                   {e.company}.{" "}<span style={{ color: A.softInk, fontStyle: "normal" }}>{e.location}</span>
                 </div>
-                <p style={{ fontFamily: serif, fontSize: 17, lineHeight: 1.5, color: A.softInk, marginTop: 14, textWrap: "pretty" }}>
+                <p style={{ fontFamily: serif, fontSize: 16, lineHeight: 1.5, color: A.softInk, marginTop: 10, maxWidth: 860, textWrap: "pretty" }}>
                   {e.summary}
                 </p>
-                <div style={{ marginTop: 14, display: "flex", flexWrap: "wrap", gap: 6 }}>
+                <div style={{ marginTop: 12, display: "flex", flexWrap: "wrap", gap: 6 }}>
                   {e.stack.map(s => <span key={s} style={darkTag(A, mono)}>{s}</span>)}
                 </div>
+                {/* Bullets sit beneath the summary at full column width. They
+                    used to live in a fixed 280px third column, which pinned
+                    them to the far right and squeezed them on wide screens. */}
+                <ul style={{
+                  listStyle: "none", padding: 0, margin: "16px 0 0",
+                  display: "flex", flexDirection: "column", gap: 8,
+                  maxWidth: 860, // cap the measure; full width runs ~130 chars on a 1920 screen
+                }}>
+                  {e.bullets.map((b, j) => (
+                    <li key={j} style={{
+                      fontSize: 14.5, lineHeight: 1.55, color: A.softInk,
+                      paddingLeft: 16, position: "relative", textWrap: "pretty",
+                    }}>
+                      <span style={{ position: "absolute", left: 0, top: 10, width: 8, height: 1, background: A.accent }} />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                {e.bullets.map((b, j) => (
-                  <li key={j} style={{
-                    fontSize: 13, lineHeight: 1.5, color: A.softInk,
-                    paddingLeft: 14, position: "relative",
-                  }}>
-                    <span style={{ position: "absolute", left: 0, top: 8, width: 6, height: 1, background: A.accent }} />
-                    {b}
-                  </li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>
@@ -549,7 +556,7 @@ function railLink(A, mono) {
 
 function primaryDark(A, mono) {
   return {
-    padding: "14px 20px",
+    padding: "11px 18px",
     fontFamily: mono, fontSize: 12, letterSpacing: 1.4, textTransform: "uppercase",
     background: A.accent, color: A.bg, textDecoration: "none",
     border: `1px solid ${A.accent}`, display: "inline-block",
@@ -557,7 +564,7 @@ function primaryDark(A, mono) {
 }
 function ghostDark(A, mono) {
   return {
-    padding: "14px 20px",
+    padding: "11px 18px",
     fontFamily: mono, fontSize: 12, letterSpacing: 1.4, textTransform: "uppercase",
     background: "transparent", color: A.ink, textDecoration: "none",
     border: `1px solid ${A.rule}`, display: "inline-block",
