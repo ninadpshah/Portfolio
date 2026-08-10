@@ -60,7 +60,7 @@ const AtelierPortfolio = () => {
 
       {/* HERO — two columns */}
       <section className="hero" style={{
-        display: "grid", gridTemplateColumns: "340px 1fr", gap: 0,
+        display: "grid", gridTemplateColumns: "420px 1fr", gap: 0,
         borderBottom: `1px solid ${A.rule}`,
         minHeight: "calc(80vh - 55px)",
       }}>
@@ -125,7 +125,7 @@ const AtelierPortfolio = () => {
           </div>
 
           <h1 style={{
-            fontFamily: serif, fontWeight: 400, fontSize: 68, lineHeight: 1.03,
+            fontFamily: serif, fontWeight: 400, fontSize: 62, lineHeight: 1.03,
             margin: "18px 0 0", color: A.ink, letterSpacing: -1.1, textWrap: "balance",
           }}>
             Building <em style={{ color: A.accent, fontStyle: "italic" }}>agentic systems</em><br/>
@@ -134,18 +134,18 @@ const AtelierPortfolio = () => {
 
           <p className="hero-pitch" style={{
             fontFamily: serif, fontSize: 20, lineHeight: 1.55,
-            color: A.softInk, maxWidth: 660, marginTop: 18, textWrap: "pretty",
+            color: A.softInk, maxWidth: 820, marginTop: 16, textWrap: "pretty",
           }}>
             {r.longPitch}
           </p>
 
           {/* whoami.sh terminal block */}
           <div className="whoami-frame" style={{
-            marginTop: 22, background: "#0f0d09", color: A.softInk,
-            fontFamily: mono, fontSize: 12.5, lineHeight: 1.7,
+            marginTop: 18, background: "#0f0d09", color: A.softInk,
+            fontFamily: mono, fontSize: 12.5, lineHeight: 1.6,
             padding: "14px 18px", border: `1px solid ${A.rule}`,
             boxShadow: `6px 6px 0 ${A.accent}`,
-            maxWidth: 660,
+            width: "fit-content", maxWidth: 820,
           }}>
             <div style={{ color: A.mutedInk, marginBottom: 6 }}># whoami.sh</div>
             <div><span style={{ color: "#9ec1cf" }}>shipped_pre_llm</span> <span style={{ color: "#d6c9b1" }}>=</span> <span style={{ color: "#a3e635" }}>True</span></div>
@@ -170,7 +170,7 @@ const AtelierPortfolio = () => {
             </div>
           </div>
 
-          <div className="hero-actions" style={{ marginTop: 22, display: "flex", gap: 12 }}>
+          <div className="hero-actions" style={{ marginTop: 20, display: "flex", gap: 12 }}>
             <a href="#contact" style={primaryDark(A, mono)}>$ hire_me</a>
             <a href="#projects" style={ghostDark(A, mono)}>$ ls ./projects</a>
           </div>
