@@ -5,6 +5,12 @@
 const AtelierPortfolio = () => {
   const r = window.RESUME;
 
+  // Projects render newest first. The sort is stable, so the order in data.jsx
+  // still decides ties within a year — that is what keeps Ask Ninad ahead of
+  // the SEC server, both 2026. Sorting here rather than hand-ordering the array
+  // means adding a project can never put the list out of sequence again.
+  const projects = [...r.projects].sort((a, b) => Number(b.year) - Number(a.year));
+
   const A = {
     bg: "#1a1610",
     panel: "#221d15",
@@ -322,7 +328,7 @@ const AtelierPortfolio = () => {
       <section id="projects" style={{ padding: "64px 56px", borderBottom: `1px solid ${A.rule}` }}>
         <DkHeader A={A} serif={serif} mono={mono} num="03" title="Projects" />
         <div style={{ marginTop: 36, display: "flex", flexDirection: "column", gap: 18 }}>
-          {r.projects.map((p, i) => (
+          {projects.map((p, i) => (
             <article key={p.id} style={{
               padding: "28px 28px",
               background: i === 0 ? A.card : A.panel,
