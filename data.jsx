@@ -18,7 +18,7 @@ const RESUME = {
   available: "Open to AI and Data roles.",
   // Rendered as the paragraph in the Contact section.
   contactPitch:
-    "I am open to AI and ML engineer roles where I can own agent work from evals to deployment. Also open to Data Engineering and Data Science roles. Email is the quickest way to reach me.",
+    "I am open to AI and Data roles where I can own the work from evals to deployment. That covers AI engineering, data engineering, and data science. Email is the quickest way to reach me.",
 
   capabilities: [
     {
@@ -236,7 +236,7 @@ const RESUME = {
 
   skills: {
     Languages: ["Python", "C", "C++", "SQL", "JavaScript", "Bash"],
-    "AI and ML": [
+    "AI and Data": [
       "PyTorch",
       "TensorFlow",
       "Keras",
