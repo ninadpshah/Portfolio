@@ -336,6 +336,9 @@ const RESUME = {
       end: "Jul 2023",
       gpa: "",
       notes: "Dual-major foundation across EE and CS. Signal processing, algorithms, distributed systems.",
+      // Rendered as a highlighted line under the notes.
+      honor:
+        "Admitted through the JEE examinations, India's national entrance route to the IITs. All India Rank 2930 in JEE Mains from a field of over 1.2 million candidates, then All India Rank 1564 in JEE Advanced, the harder second stage that decides IIT admission. Roughly the top 0.13% of the starting field.",
     },
   ],
 

@@ -447,6 +447,18 @@ const AtelierPortfolio = () => {
                   <div style={{ fontFamily: serif, fontStyle: "italic", color: A.accent, marginTop: 4 }}>{ed.degree}</div>
                   <div style={{ fontSize: 13, color: A.softInk, marginTop: 8, lineHeight: 1.5 }}>{ed.notes}</div>
                   {ed.gpa && <div style={{ fontFamily: mono, fontSize: 11, color: A.softInk, marginTop: 6 }}>GPA. {ed.gpa}</div>}
+                  {ed.honor && (
+                    <div style={{
+                      marginTop: 12, paddingLeft: 14, position: "relative",
+                      fontSize: 13, lineHeight: 1.55, color: A.ink, maxWidth: 620,
+                    }}>
+                      <span style={{
+                        position: "absolute", left: 0, top: 0, bottom: 0,
+                        width: 2, background: A.accent,
+                      }} />
+                      {ed.honor}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
