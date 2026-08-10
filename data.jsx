@@ -15,7 +15,7 @@ const RESUME = {
     github: "github.com/NinadPShah",
   },
   resumeUrl: "resume/Ninad_Shah_AI_Engineer_Resume.pdf",
-  available: "Open to AI and ML Engineer roles.",
+  available: "Open to AI and Data roles.",
   // Rendered as the paragraph in the Contact section.
   contactPitch:
     "I am open to AI and ML engineer roles where I can own agent work from evals to deployment. Also open to Data Engineering and Data Science roles. Email is the quickest way to reach me.",
