@@ -11,7 +11,7 @@
   },
   {
     "question": "Have you shipped AI to production?",
-    "answer": "Yes, at two companies. At Spyne.ai in 2022 I deployed computer vision services on FastAPI and AWS at 99.8% uptime, back when shipping AI meant training and deploying your own models. At CAPX and now at Armor1.ai I ship LLM and agent systems.",
+    "answer": "Yes, at three companies. At Spyne.ai in 2022 I deployed computer vision services on FastAPI and AWS at 99.8% uptime, back when shipping AI meant training and deploying your own models. At CAPX and now at Armor1.ai I ship LLM and agent systems.",
     "source": "FAQ"
   },
   {
