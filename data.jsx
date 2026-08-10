@@ -2,19 +2,23 @@
 const RESUME = {
   name: "Ninad Parthiv Shah",
   initials: "NS",
+  // Not rendered by the page. Mirrored by hand into the <meta name="description">
+  // and og:/twitter: tags in index.html — keep the two in sync.
   headline: "AI Software Engineer building agents, MCP servers, and production LLM tools.",
+  // Rendered as the hero paragraph.
   longPitch:
-    "I work on production AI. Recent projects include a five-layer security scanner, agent orchestration with Google ADK, and a RAG pipeline over SEC filings. I focus on evals, guardrails, and the infrastructure that keeps agents reliable in production.",
-  location: "Salt Lake City, UT. Remote. Open to relocation.",
+    "AI Software Engineer with a Master's in Data Science from Arizona State. I work on production LLM systems: multi-pass security scanners, static analysis tooling, agent orchestration with Google ADK and LangGraph, RAG pipelines, and the responsible-AI guardrails that go with them.",
   email: "ninadpshah2@gmail.com",
   phone: "+1 602 884 6345",
   links: {
     linkedin: "linkedin.com/in/ninadpshah",
     github: "github.com/NinadPShah",
   },
-  resumeUrl: "https://drive.google.com/file/d/1wy9pdjOpB591IIImGIc2HprW5UUhAzsh/view?usp=sharing",
-  available: "Open to AI and ML Engineer roles. May 2026.",
-  alsoOpen: "Primary focus: AI and ML Engineering. Also open to Data Engineering and Data Science roles.",
+  resumeUrl: "resume/Ninad_Shah_AI_Engineer_Resume.pdf",
+  available: "Open to AI and ML Engineer roles.",
+  // Rendered as the paragraph in the Contact section.
+  contactPitch:
+    "I am open to AI and ML engineer roles where I can own agent work from evals to deployment. Also open to Data Engineering and Data Science roles. Email is the quickest way to reach me.",
 
   capabilities: [
     {
@@ -43,19 +47,21 @@ const RESUME = {
   experience: [
     {
       company: "Armor1.ai",
-      role: "Security Software Engineer",
+      role: "AI Security Software Engineer",
       location: "Remote",
       start: "Dec 2025",
       end: "Present",
       tag: "Current",
       summary:
-        "Building AI security infrastructure. Multi-pass LLM analysis, evaluation pipelines, and responsible AI guardrails.",
+        "Building AI security infrastructure. Static analysis tooling, multi-pass LLM analysis, telemetry pipelines, and responsible AI guardrails.",
       bullets: [
-        "Designed a five-layer AI security scanner with multi-pass LLM analysis across 25+ metrics. Combined static review with agent-based detection and tiered guardrails to cut per-scan cost under $0.005.",
-        "Built evaluation pipelines with human-in-the-loop review to validate agent consistency across prompt versions on curated evalsets.",
-        "Analyzed MCP servers and AI tooling in production to surface PII exposure and security risks, driving responsible AI framework adoption.",
+        "Designed a five-layer AI security scanner with multi-pass LLM analysis across 25+ metrics. Version-controlled prompts and tiered guardrails brought per-scan cost under $0.005.",
+        "Built static analysis tooling in Python over the ast module, tracing taint flow from untrusted sources to dangerous sinks across third-party code to surface injection and exfiltration paths.",
+        "Wrote Python and SQL pipelines over BigQuery telemetry modelling 7 threat categories, with a 20-signal confidence model and a 10-layer filter that cut false positives roughly 85%.",
+        "Built edit-distance heuristics flagging slopsquatted and typosquatted installs, cross-checked against the live PyPI and npm registries.",
+        "Built evaluation pipelines with human-in-the-loop review to validate agent consistency across prompt versions, and analyzed MCP servers in production to surface PII exposure.",
       ],
-      stack: ["LLM Evals", "MCP", "Guardrails", "Python"],
+      stack: ["Static Analysis", "LLM Evals", "MCP", "BigQuery", "SQL", "Python"],
     },
     {
       company: "CAPX",
@@ -64,13 +70,13 @@ const RESUME = {
       start: "Aug 2025",
       end: "Dec 2025",
       summary:
-        "Shipped agent backends for financial data extraction. Sequential orchestration, tool calling, and event-driven workflows.",
+        "Shipped agent backends for financial data extraction. Sequential orchestration, typed interfaces, tool calling, and event-driven workflows.",
       bullets: [
-        "Built AI agents with Google ADK and sequential autonomous orchestration. Extracted 20+ metrics from 4,000+ firms via REST APIs.",
-        "Built backend services with multi-step workflow automation and tool-calling patterns. Implemented state management and usage analysis guardrails.",
-        "Owned event-driven architectures and iterated on AI-powered tools with end users based on real-world feedback.",
+        "Built AI agents with Google ADK and LangGraph in sequential and autonomous modes, extracting 20+ metrics from 4,000+ firms via REST APIs.",
+        "Built backend services on LangGraph with typed Pydantic interfaces, implementing state management, retries, and orchestration across long-running multi-step jobs.",
+        "Owned event-driven services end to end through containerized deploys and CI/CD, iterating on AI-powered tools with real user feedback.",
       ],
-      stack: ["Google ADK", "Tool Calling", "FastAPI", "REST"],
+      stack: ["Google ADK", "LangGraph", "Pydantic", "FastAPI", "REST"],
     },
     {
       company: "Arizona State University",
@@ -106,6 +112,25 @@ const RESUME = {
 
   projects: [
     {
+      id: "ask-ninad",
+      title: "Ask Ninad — AI Chat on This Site",
+      kicker: "New. Try it — bottom right.",
+      year: "2026",
+      disciplines: ["AI Engineering", "Software Engineering"],
+      blurb:
+        "The chat widget on this page. An AI that answers questions about my work in my voice, grounded strictly in a knowledge file I wrote and reviewed line by line, with a source tag on every answer. It refuses anything it cannot source, and it runs entirely on free infrastructure.",
+      contributions: [
+        "Grounded answers with visible source attribution, and no retrieval layer — the corpus is small enough to send whole",
+        "Serverless backend on Cloudflare Workers with per-visitor rate limiting, a global daily cap, and the API key held only as a secret",
+        "Refuses unsourced questions and corrects false premises instead of guessing",
+        "37-check suite of factual, trap, and prompt-injection questions gates every deploy",
+        "Prepared-answer fallback so the widget keeps working if the AI service is unavailable",
+      ],
+      stack: ["Gemini", "Cloudflare Workers", "JavaScript", "GitHub Pages"],
+      metric: { value: "$0", label: "cost to run" },
+      repoUrl: "https://github.com/ninadpshah/ask-ninad-worker",
+    },
+    {
       id: "edgar-rag",
       title: "SEC EDGAR RAG and Local MCP Server",
       kicker: "Featured. Open Source.",
@@ -120,6 +145,7 @@ const RESUME = {
       ],
       stack: ["FastMCP", "ChromaDB", "BGE-base", "Python", "Loughran-McDonald"],
       metric: { value: "0.89", label: "Recall @ 5" },
+      repoUrl: "https://github.com/ninadpshah/SEC-RAG-MCP",
     },
     {
       id: "ipo-success",
@@ -128,15 +154,16 @@ const RESUME = {
       year: "2025",
       disciplines: ["Data Science", "Data Engineering"],
       blurb:
-        "An end-to-end ML pipeline predicting 6-month and 3-year IPO performance from SEC filings, macroeconomic indicators, and market sentiment. Capstone for the M.S. Data Science program at Arizona State.",
+        "An end-to-end ML pipeline predicting 6-month and 3-year IPO performance from SEC filings, macroeconomic indicators, and market sentiment. Scraped 9,000+ companies from SEC EDGAR and narrowed them to 5,057 usable IPOs. Capstone for the M.S. Data Science program at Arizona State.",
       contributions: [
-        "Integrated 6 data sources covering 5,057 IPOs from 2009 to 2025",
+        "6 data sources integrated across 5,057 IPOs from 2009 to 2025",
         "200+ engineered features across financials, macro, and sentiment",
         "LightGBM AUC 0.77 with SHAP interpretability",
         "Investment backtest returning 9.6x random baseline",
       ],
       stack: ["LightGBM", "TensorFlow", "Optuna", "SHAP", "SEC EDGAR", "FRED"],
       metric: { value: "9.6x", label: "ROI vs random" },
+      repoUrl: "https://github.com/ninadpshah/IPO-Success-Prediction",
     },
     {
       id: "fake-reviews",
@@ -153,6 +180,7 @@ const RESUME = {
       ],
       stack: ["scikit-learn", "XGBoost", "LightGBM", "CatBoost", "NLTK", "VADER"],
       metric: { value: "90.2%", label: "accuracy" },
+      repoUrl: "https://github.com/ninadpshah/Fake-Review-detection",
     },
     {
       id: "tlc-tips",
@@ -169,6 +197,7 @@ const RESUME = {
       ],
       stack: ["TensorFlow", "Keras", "pandas", "scikit-learn", "GPU"],
       metric: { value: "$2.62", label: "test RMSE" },
+      repoUrl: "https://github.com/ninadpshah/New-York-TLC-Tip-Prediction",
     },
     {
       id: "vision-blur",
@@ -181,10 +210,11 @@ const RESUME = {
       contributions: [
         "98.5% binary accuracy with DenseNet121 transfer learning",
         "Custom blur pipeline with Gaussian and cylindrical kernels at multiple sigmas",
-        "Published academic paper on CNN degradation under blur, Spring 2022",
+        "Undergraduate research on CNN degradation under blur, Spring 2022",
       ],
       stack: ["TensorFlow", "Keras", "OpenCV", "Transfer Learning"],
       metric: { value: "98.5%", label: "accuracy" },
+      repoUrl: "https://github.com/ninadpshah/Vision-without-glasses",
     },
     {
       id: "social-media",
@@ -201,11 +231,12 @@ const RESUME = {
       ],
       stack: ["pandas", "scikit-learn", "Plotly", "Seaborn"],
       metric: { value: "5", label: "user segments" },
+      repoUrl: "https://github.com/ninadpshah/Instagram-user-analysis",
     },
   ],
 
   skills: {
-    Languages: ["Python", "C", "C++", "SQL", "Julia"],
+    Languages: ["Python", "C", "C++", "SQL", "JavaScript", "Bash"],
     "AI and ML": [
       "PyTorch",
       "TensorFlow",
@@ -239,13 +270,22 @@ const RESUME = {
       "Sentiment Analysis",
       "Feature Engineering",
       "Time Series",
+      "Causal Inference",
     ],
     "Cloud and Tools": [
       "AWS",
       "Azure",
+      "Linux",
       "Docker",
       "FastAPI",
+      "Pydantic",
+      "pytest",
+      "asyncio",
       "REST APIs",
+      "PostgreSQL",
+      "BigQuery",
+      "DuckDB",
+      "SQLAlchemy",
       "PySpark",
       "Spark",
       "Hadoop",
@@ -259,8 +299,22 @@ const RESUME = {
       "NumPy",
       "Plotly",
       "Tableau",
+      "Power BI",
       "Git",
+      "GitHub Actions",
       "Jupyter",
+    ],
+    "Engineering Practices": [
+      "Unit and Integration Testing",
+      "Static Analysis and AST Tooling",
+      "Profiling and Performance Tuning",
+      "REST API Design",
+      "Async Programming",
+      "Packaging and Dependency Management",
+      "CI/CD",
+      "Code Review",
+      "Microservices",
+      "Event-Driven Architecture",
     ],
   },
 

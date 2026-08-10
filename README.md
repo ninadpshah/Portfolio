@@ -49,12 +49,14 @@ Almost all edits happen in `data.jsx`:
 
 | Change | Where |
 |---|---|
-| Current role | `experience[0]` — first entry renders as current |
-| Add a project | append to the `projects` array |
-| Headline and pitch | `headline`, `longPitch` |
-| Stack tags | `skills` |
+| Current role | `experience[0]` — first entry renders as current, and drives the "Currently" rail |
+| Add a project | append to the `projects` array; `repoUrl` and `demoUrl` render as links when present |
+| Hero paragraph | `longPitch` |
+| Contact paragraph | `contactPitch` |
+| Availability line | `available` |
+| Stack tags | `skills` — each key becomes a group heading |
 | Certifications | `certifications` |
-| Résumé download link | `resumeUrl` |
+| Résumé download link | `resumeUrl` — the PDF lives in `resume/` |
 
 Layout, colour, and typography live in `portfolio-atelier.jsx`. Section markers in that file (`{/* ABOUT */}`, `{/* CONTACT */}`) map to the page sections.
 

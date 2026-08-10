@@ -91,15 +91,8 @@ const AtelierPortfolio = () => {
               Currently
             </div>
             <div style={{ fontFamily: sans, fontSize: 14, color: A.ink, marginTop: 6, lineHeight: 1.45 }}>
-              Security Software Engineer at Armor1.ai
+              {r.experience[0].role} at {r.experience[0].company}
             </div>
-          </div>
-
-          <div style={{ marginTop: 22 }}>
-            <div style={{ fontFamily: mono, fontSize: 10, color: A.mutedInk, letterSpacing: 1.5, textTransform: "uppercase" }}>
-              Based in
-            </div>
-            <div style={{ fontFamily: sans, fontSize: 14, color: A.ink, marginTop: 6 }}>{r.location}</div>
           </div>
 
           <div style={{ marginTop: 22 }}>
@@ -142,9 +135,7 @@ const AtelierPortfolio = () => {
             fontFamily: serif, fontSize: 21, lineHeight: 1.55,
             color: A.softInk, maxWidth: 640, marginTop: 24, textWrap: "pretty",
           }}>
-            AI Software Engineer with a Master&apos;s in Data Science from Arizona State.
-            I work on production LLM systems: multi-pass scanners, agent orchestration with Google ADK,
-            RAG pipelines, and the responsible-AI guardrails that go with them.
+            {r.longPitch}
           </p>
 
           {/* whoami.sh terminal block */}
@@ -163,6 +154,19 @@ const AtelierPortfolio = () => {
             <div style={{ paddingLeft: 28 }}><span style={{ color: A.accent }}>"deep_learning"</span>, <span style={{ color: A.accent }}>"data_pipelines"</span>,</div>
             <div>]</div>
             <div><span style={{ color: "#9ec1cf" }}>open_to_relocate</span> <span style={{ color: "#d6c9b1" }}>=</span> <span style={{ color: "#a3e635" }}>True</span></div>
+            <div style={{ marginTop: 10 }}>
+              <a
+                href="#"
+                onClick={(e) => { e.preventDefault(); if (window.askNinad) window.askNinad.open(); }}
+                style={{
+                  color: A.accent, textDecoration: "none",
+                  borderBottom: `1px dashed ${A.accent}`, cursor: "pointer",
+                }}
+              >
+                ask_my_ai()
+              </a>
+              <span style={{ color: A.mutedInk }}>{"  # ← don't take my word for it"}</span>
+            </div>
           </div>
 
           <div style={{ marginTop: 28, display: "flex", gap: 12 }}>
@@ -291,7 +295,7 @@ const AtelierPortfolio = () => {
                 </div>
               </div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                {e.bullets.slice(0,3).map((b, j) => (
+                {e.bullets.map((b, j) => (
                   <li key={j} style={{
                     fontSize: 13, lineHeight: 1.5, color: A.softInk,
                     paddingLeft: 14, position: "relative",
@@ -348,7 +352,7 @@ const AtelierPortfolio = () => {
               </div>
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <div>
-                  {i === 0 && (
+                  {p.id === "edgar-rag" && (
                     <div style={{
                       marginBottom: 16,
                       background: "#0f0d09", border: `1px solid ${A.rule}`,
@@ -374,6 +378,20 @@ const AtelierPortfolio = () => {
                     ))}
                   </ul>
                 </div>
+                {(p.repoUrl || p.demoUrl) && (
+                  <div style={{ marginTop: 18, display: "flex", flexWrap: "wrap", gap: 8 }}>
+                    {p.repoUrl && (
+                      <a href={p.repoUrl} target="_blank" rel="noopener" style={projectLink(A, mono)}>
+                        GitHub &rarr;
+                      </a>
+                    )}
+                    {p.demoUrl && (
+                      <a href={p.demoUrl} target="_blank" rel="noopener" style={projectLink(A, mono)}>
+                        Live &rarr;
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </article>
           ))}
@@ -459,8 +477,7 @@ const AtelierPortfolio = () => {
               Let&apos;s talk about what you&apos;re <em style={{ color: A.accent, fontStyle: "italic" }}>building.</em>
             </h2>
             <p style={{ fontFamily: serif, fontSize: 19, color: A.softInk, marginTop: 18, maxWidth: 560 }}>
-              I am open to AI and ML engineer roles where I can own agent work from evals to deployment.
-              Also open to Data Engineering and Data Science roles. Email is the quickest way to reach me.
+              {r.contactPitch}
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 14, fontFamily: mono, fontSize: 13 }}>
@@ -544,6 +561,15 @@ function ghostDark(A, mono) {
     fontFamily: mono, fontSize: 12, letterSpacing: 1.4, textTransform: "uppercase",
     background: "transparent", color: A.ink, textDecoration: "none",
     border: `1px solid ${A.rule}`, display: "inline-block",
+  };
+}
+
+function projectLink(A, mono) {
+  return {
+    fontFamily: mono, fontSize: 10, padding: "5px 10px",
+    border: `1px solid ${A.rule}`, background: "transparent",
+    color: A.accent, textDecoration: "none",
+    textTransform: "uppercase", letterSpacing: 1,
   };
 }
 

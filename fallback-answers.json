@@ -1,0 +1,47 @@
+[
+  {
+    "question": "What do you do at Armor1?",
+    "answer": "I'm an AI Security Software Engineer at Armor1.ai, where I build AI security infrastructure. I designed a five-layer security scanner that runs multi-pass LLM analysis across more than 25 metrics, tuned down to under half a cent per scan, and I built static analysis tooling in Python that traces taint flow from untrusted sources to dangerous sinks.",
+    "source": "Armor1"
+  },
+  {
+    "question": "What did you build at CAPX?",
+    "answer": "At CAPX I shipped agent backends for financial data extraction. I built AI agents with Google ADK and LangGraph in sequential and autonomous modes, extracting more than 20 metrics from over 4,000 firms, and backend services with typed Pydantic interfaces handling state, retries, and long-running multi-step jobs.",
+    "source": "CAPX"
+  },
+  {
+    "question": "Have you shipped AI to production?",
+    "answer": "Yes, at two companies. At Spyne.ai in 2022 I deployed computer vision services on FastAPI and AWS at 99.8% uptime, back when shipping AI meant training and deploying your own models. At CAPX and now at Armor1.ai I ship LLM and agent systems.",
+    "source": "FAQ"
+  },
+  {
+    "question": "Tell me about the SEC filings tool.",
+    "answer": "It's an MCP server with a RAG pipeline over SEC EDGAR 10-K filings, built with FastMCP and ChromaDB. Financial analysts spend more than 40 hours a quarter reading those filings by hand; this answers questions about them in seconds from any MCP client. It also scores Loughran-McDonald sentiment across five categories and detects year-over-year changes in risk language.",
+    "source": "SEC Project"
+  },
+  {
+    "question": "How do you know your RAG pipeline actually works?",
+    "answer": "Because I measured it. There's an evaluation harness with 35 golden queries scoring Recall@K, MRR, and Precision@K, and the best configuration reaches Recall@5 of 0.89 — when I test it against questions with known answers, it finds the right information about nine times out of ten. The structure-aware chunker hits 87.7% recall on financial documents versus 75.9% for semantic chunking.",
+    "source": "SEC Project"
+  },
+  {
+    "question": "What did your IPO model predict?",
+    "answer": "It predicts 6-month and 3-year IPO performance from SEC filings, macroeconomic indicators, and market sentiment. I scraped over 9,000 companies from EDGAR and narrowed them to 5,057 usable IPOs from 2009 to 2025, engineering more than 200 features. The best LightGBM model reached AUC 0.7714 on the 3-year target, and the investment backtest returned 9.6 times what random selection did.",
+    "source": "IPO Project"
+  },
+  {
+    "question": "Where did you study?",
+    "answer": "I did my Master of Science in Data Science, Analytics, and Engineering at Arizona State University, finishing in May 2025 with a 3.97 GPA. Before that I read Electrical Engineering and Computer Science at IIT Gandhinagar in India.",
+    "source": "Education"
+  },
+  {
+    "question": "Are you open to relocating?",
+    "answer": "Yes — I'm open to relocating anywhere, and I'm open to onsite, hybrid, or remote. I did my master's at Arizona State in Tempe, so the Phoenix area is familiar to me.",
+    "source": "FAQ"
+  },
+  {
+    "question": "What kind of role are you looking for?",
+    "answer": "I'm open to AI and ML Engineer roles where I can own agent work from evaluations through to deployment. I'm also open to Data Engineering and Data Science roles.",
+    "source": "FAQ"
+  }
+]
