@@ -79,16 +79,34 @@
        Keyed on height, not width, because the problem is the fold: the
        hero must finish above it. Only shortens the hero, so nothing
        changes on a normal desktop. */
-    @media (min-width: 821px) and (max-height: 720px) {
-      .atelier h1 { font-size: 38px !important; line-height: 1.05 !important; }
+    @media (min-width: 821px) and (max-height: 900px) {
+      .atelier h1 { font-size: 48px !important; margin-top: 12px !important; }
+      .atelier .hero-pitch { font-size: 17px !important; line-height: 1.5 !important; margin-top: 12px !important; }
+      .atelier .whoami-frame {
+        font-size: 11.5px !important;
+        line-height: 1.42 !important;
+        padding: 11px 16px !important;
+        margin-top: 14px !important;
+      }
+      .atelier .hero-actions { margin-top: 14px !important; }
+      .atelier .hero-copy { padding: 20px 56px 32px !important; }
+      .atelier aside { padding: 20px 36px 32px 56px !important; }
+      .atelier [style*="height: 258px"] { height: 200px !important; }
+    }
+
+    @media (min-width: 821px) and (max-height: 700px) {
+      .atelier h1 { font-size: 38px !important; margin-top: 10px !important; }
+      .atelier .hero-pitch { font-size: 15px !important; margin-top: 10px !important; }
       .atelier .whoami-frame {
         font-size: 10.5px !important;
         line-height: 1.3 !important;
-        padding: 9px 14px !important;
+        padding: 8px 14px !important;
+        margin-top: 10px !important;
       }
-      .atelier [style*="padding: 20px 56px 32px"],
-      .atelier [style*="padding: 20px 36px 32px 56px"] { padding-top: 10px !important; }
-      .atelier [style*="height: 210px"] { height: 150px !important; }
+      .atelier .hero-actions { margin-top: 10px !important; }
+      .atelier .hero-actions a { padding: 10px 16px !important; }
+      .atelier .hero-copy { padding-top: 12px !important; }
+      .atelier [style*="height: 258px"] { height: 150px !important; }
     }
 
     /* ─── Responsive overrides ─── */

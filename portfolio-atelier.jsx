@@ -28,7 +28,7 @@ const AtelierPortfolio = () => {
     <div className="atelier" style={{ width: "100%", background: A.bg, color: A.ink, fontFamily: sans }}>
       {/* Top strip */}
       <div style={{
-        padding: "9px 56px",
+        padding: "12px 56px",
         borderBottom: `1px solid ${A.rule}`,
         display: "flex", justifyContent: "space-between", alignItems: "center",
         fontFamily: mono, fontSize: 11, color: A.softInk,
@@ -59,13 +59,14 @@ const AtelierPortfolio = () => {
       </div>
 
       {/* HERO — two columns */}
-      <section style={{
+      <section className="hero" style={{
         display: "grid", gridTemplateColumns: "340px 1fr", gap: 0,
         borderBottom: `1px solid ${A.rule}`,
+        minHeight: "calc(80vh - 55px)",
       }}>
         {/* Left rail: portrait + identity */}
         <aside style={{
-          padding: "20px 36px 32px 56px",
+          padding: "34px 36px 40px 56px",
           borderRight: `1px solid ${A.rule}`,
           background: A.panel,
         }}>
@@ -74,7 +75,7 @@ const AtelierPortfolio = () => {
             padding: 10, background: A.card,
           }}>
             <div style={{
-              width: "100%", height: 210,
+              width: "100%", height: 258,
               backgroundImage: "url(portrait.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -112,7 +113,7 @@ const AtelierPortfolio = () => {
         </aside>
 
         {/* Right column: hero copy */}
-        <div style={{ padding: "20px 56px 32px" }}>
+        <div className="hero-copy" style={{ padding: "34px 56px 40px" }}>
           <div style={{
             display: "inline-flex", alignItems: "center", gap: 10,
             fontFamily: mono, fontSize: 11, color: A.softInk,
@@ -124,27 +125,27 @@ const AtelierPortfolio = () => {
           </div>
 
           <h1 style={{
-            fontFamily: serif, fontWeight: 400, fontSize: 50, lineHeight: 1.04,
-            margin: "12px 0 0", color: A.ink, letterSpacing: -1.1, textWrap: "balance",
+            fontFamily: serif, fontWeight: 400, fontSize: 68, lineHeight: 1.03,
+            margin: "18px 0 0", color: A.ink, letterSpacing: -1.1, textWrap: "balance",
           }}>
             Building <em style={{ color: A.accent, fontStyle: "italic" }}>agentic systems</em><br/>
             that ship in production.
           </h1>
 
-          <p style={{
-            fontFamily: serif, fontSize: 17, lineHeight: 1.5,
-            color: A.softInk, maxWidth: 620, marginTop: 11, textWrap: "pretty",
+          <p className="hero-pitch" style={{
+            fontFamily: serif, fontSize: 20, lineHeight: 1.55,
+            color: A.softInk, maxWidth: 660, marginTop: 18, textWrap: "pretty",
           }}>
             {r.longPitch}
           </p>
 
           {/* whoami.sh terminal block */}
           <div className="whoami-frame" style={{
-            marginTop: 14, background: "#0f0d09", color: A.softInk,
-            fontFamily: mono, fontSize: 11.5, lineHeight: 1.42,
-            padding: "11px 16px", border: `1px solid ${A.rule}`,
-            boxShadow: `5px 5px 0 ${A.accent}`,
-            maxWidth: 620,
+            marginTop: 22, background: "#0f0d09", color: A.softInk,
+            fontFamily: mono, fontSize: 12.5, lineHeight: 1.7,
+            padding: "14px 18px", border: `1px solid ${A.rule}`,
+            boxShadow: `6px 6px 0 ${A.accent}`,
+            maxWidth: 660,
           }}>
             <div style={{ color: A.mutedInk, marginBottom: 6 }}># whoami.sh</div>
             <div><span style={{ color: "#9ec1cf" }}>shipped_pre_llm</span> <span style={{ color: "#d6c9b1" }}>=</span> <span style={{ color: "#a3e635" }}>True</span></div>
@@ -169,7 +170,7 @@ const AtelierPortfolio = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: 14, display: "flex", gap: 12 }}>
+          <div className="hero-actions" style={{ marginTop: 22, display: "flex", gap: 12 }}>
             <a href="#contact" style={primaryDark(A, mono)}>$ hire_me</a>
             <a href="#projects" style={ghostDark(A, mono)}>$ ls ./projects</a>
           </div>
@@ -287,7 +288,7 @@ const AtelierPortfolio = () => {
                 <div style={{ fontFamily: serif, fontStyle: "italic", fontSize: 17, color: A.accent, marginTop: 3 }}>
                   {e.company}.{" "}<span style={{ color: A.softInk, fontStyle: "normal" }}>{e.location}</span>
                 </div>
-                <p style={{ fontFamily: serif, fontSize: 16, lineHeight: 1.5, color: A.softInk, marginTop: 10, maxWidth: 860, textWrap: "pretty" }}>
+                <p style={{ fontFamily: serif, fontSize: 16, lineHeight: 1.5, color: A.softInk, marginTop: 10, maxWidth: 1120, textWrap: "pretty" }}>
                   {e.summary}
                 </p>
                 <div style={{ marginTop: 12, display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -299,7 +300,7 @@ const AtelierPortfolio = () => {
                 <ul style={{
                   listStyle: "none", padding: 0, margin: "16px 0 0",
                   display: "flex", flexDirection: "column", gap: 8,
-                  maxWidth: 860, // cap the measure; full width runs ~130 chars on a 1920 screen
+                  maxWidth: 1120, // wide enough to fill a 1920 column, capped so it never runs away on an ultrawide
                 }}>
                   {e.bullets.map((b, j) => (
                     <li key={j} style={{
@@ -556,7 +557,7 @@ function railLink(A, mono) {
 
 function primaryDark(A, mono) {
   return {
-    padding: "11px 18px",
+    padding: "14px 20px",
     fontFamily: mono, fontSize: 12, letterSpacing: 1.4, textTransform: "uppercase",
     background: A.accent, color: A.bg, textDecoration: "none",
     border: `1px solid ${A.accent}`, display: "inline-block",
