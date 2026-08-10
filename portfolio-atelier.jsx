@@ -288,7 +288,7 @@ const AtelierPortfolio = () => {
                 <div style={{ fontFamily: serif, fontStyle: "italic", fontSize: 17, color: A.accent, marginTop: 3 }}>
                   {e.company}.{" "}<span style={{ color: A.softInk, fontStyle: "normal" }}>{e.location}</span>
                 </div>
-                <p style={{ fontFamily: serif, fontSize: 16, lineHeight: 1.5, color: A.softInk, marginTop: 10, maxWidth: 1120, textWrap: "pretty" }}>
+                <p style={{ fontFamily: serif, fontSize: 16, lineHeight: 1.5, color: A.softInk, marginTop: 10, maxWidth: 1220, textWrap: "pretty" }}>
                   {e.summary}
                 </p>
                 <div style={{ marginTop: 12, display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -300,7 +300,7 @@ const AtelierPortfolio = () => {
                 <ul style={{
                   listStyle: "none", padding: 0, margin: "16px 0 0",
                   display: "flex", flexDirection: "column", gap: 8,
-                  maxWidth: 1120, // wide enough to fill a 1920 column, capped so it never runs away on an ultrawide
+                  maxWidth: 1220, // fills the column at 1920; only binds on an ultrawide, where it stops the measure running away
                 }}>
                   {e.bullets.map((b, j) => (
                     <li key={j} style={{
