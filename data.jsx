@@ -339,9 +339,21 @@ const RESUME = {
     },
   ],
 
+  // `url` makes the badge a real link to the certificate PDF. Names match the
+  // certificates exactly, so a recruiter can check them against AWS.
   certifications: [
-    { name: "AWS Cloud Practitioner", issuer: "Amazon Web Services" },
-    { name: "AWS AI Practitioner", issuer: "Amazon Web Services" },
+    {
+      name: "AWS Certified AI Practitioner",
+      issuer: "Amazon Web Services",
+      issued: "Jun 2025",
+      url: "resume/AWS_Certified_AI_Practitioner.pdf",
+    },
+    {
+      name: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      issued: "Jun 2025",
+      url: "resume/AWS_Certified_Cloud_Practitioner.pdf",
+    },
     { name: "Hadoop and Apache Spark", issuer: "LinkedIn Learning" },
     { name: "Microsoft Azure", issuer: "LinkedIn Learning" },
   ],

@@ -461,15 +461,31 @@ const AtelierPortfolio = () => {
                 }}>
                   <div>
                     <div style={{ fontFamily: serif, fontSize: 16, color: A.ink }}>{c.name}</div>
-                    <div style={{ fontFamily: mono, fontSize: 10, color: A.mutedInk, marginTop: 2, textTransform: "uppercase", letterSpacing: 1 }}>{c.issuer}</div>
+                    <div style={{ fontFamily: mono, fontSize: 10, color: A.mutedInk, marginTop: 2, textTransform: "uppercase", letterSpacing: 1 }}>
+                      {c.issuer}{c.issued ? ` · Issued ${c.issued}` : ""}
+                    </div>
                   </div>
-                  <div style={{
-                    fontFamily: mono, fontSize: 10, color: A.accent,
-                    border: `1px solid ${A.accent}`, padding: "4px 8px",
-                    textTransform: "uppercase", letterSpacing: 1,
-                  }}>
-                    Verified
-                  </div>
+                  {/* A badge that says "Verified" should be checkable. Where a
+                      certificate PDF exists, the badge links to it. */}
+                  {c.url ? (
+                    <a href={c.url} target="_blank" rel="noopener" style={{
+                      fontFamily: mono, fontSize: 10, color: A.accent,
+                      border: `1px solid ${A.accent}`, padding: "4px 8px",
+                      textTransform: "uppercase", letterSpacing: 1,
+                      textDecoration: "none", whiteSpace: "nowrap",
+                    }}>
+                      Certificate &#8599;
+                    </a>
+                  ) : (
+                    <div style={{
+                      fontFamily: mono, fontSize: 10, color: A.mutedInk,
+                      border: `1px solid ${A.rule}`, padding: "4px 8px",
+                      textTransform: "uppercase", letterSpacing: 1,
+                      whiteSpace: "nowrap",
+                    }}>
+                      Completed
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
